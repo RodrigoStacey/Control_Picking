@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body class="hold-transition">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">404 Error Page</li>
+            </ol>
+            </div>
+        </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="error-page">
+        <img src="{{ url_for('static',filename= 'icons/if-word-18-2875628_88181.png')}}" alt="404" style="opacity: .8;width:300px;height:300px;">
+        <div class="error-content">
+            <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Página no existe.</h3>
+
+            <p>
+                No hemos podido encontrar la página que buscabas. Mientras tanto, 
+                puede <a href="/"> volver al panel inicial</a>.
+            </p>
+
+
+        </div>
+        <!-- /.error-content -->
+        </div>
+        <!-- /.error-page -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+</body>
+{% endblock  %}

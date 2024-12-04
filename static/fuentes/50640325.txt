@@ -1,0 +1,908 @@
+				LISTA DE SEPARACIÓN					Página:			     1
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		GARAY PALACIOS ADOLFO TEODORO					Almacén:				1001
+Código Cliente:		1000113179					Ubicación:
+Punto de Envío:		CALLE MARISCAL SUCRE 2 01 Y MANUE					Número Entrega:				 814190520
+Código Pto Envío:		1000113179					Fecha Entrega:				31.10.2024
+Punto de Entrega:		TIENDA GARAY					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000113179					Orden Entrega:				0006
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+14607	YOG BBLE KID KK MORA BOT 180G					         5		UN
+14719	MANTEQUILLA CON SAL KIOSKO 250G					         1		UN
+17350	YOG BBLE KID KK BANANO BOT 180G					         5		UN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     2
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		GARAY PALACIOS ADOLFO TEODORO					Almacén:				1001
+Código Cliente:		1000113179					Ubicación:				PV
+Punto de Envío:		CALLE MARISCAL SUCRE 2 01 Y MANUE					Número Entrega:				 814190520
+Código Pto Envío:		1000113179					Fecha Entrega:				31.10.2024
+Punto de Entrega:		TIENDA GARAY					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000113179					Orden Entrega:				0006
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+10830	YOG BBLE KIOSKO DZNO BOT 3.5KG					         2		UN		PV000500
+5771	Q PROVO AHUM KIOSKO BLOQ 260G					         3		UN		PV002050
+5731	Q MOZAR KIOSKO BLOQ 500G					         4		UN		PV003300
+11175	YOG BBLE KID KK FTLLA BOT 180G					         5		UN		PV009450
+11177	YOG BBLE KID KK DZNO BOT 180G					         5		UN		PV009500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     3
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		MARTINEZ CUZCO CRISTIAN GEOVANNY					Almacén:				1001
+Código Cliente:		1000038125					Ubicación:
+Punto de Envío:		ANDES Y H MENDOZA ESQ CUENCA					Número Entrega:				 814190521
+Código Pto Envío:		1000038125					Fecha Entrega:				31.10.2024
+Punto de Entrega:		MARTINEZ CUZCO CRISTIAN GEOVANNY					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000038125					Orden Entrega:				0005
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+15565	FOURPACK AREQUIPE Y PRETZELS 75 GR					         2		UN
+15592	YOG BBLE KIOSKO NATURAL FUN 900G					         4		UN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     4
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		MARTINEZ CUZCO CRISTIAN GEOVANNY					Almacén:				1001
+Código Cliente:		1000038125					Ubicación:				PV
+Punto de Envío:		ANDES Y H MENDOZA ESQ CUENCA					Número Entrega:				 814190521
+Código Pto Envío:		1000038125					Fecha Entrega:				31.10.2024
+Punto de Entrega:		MARTINEZ CUZCO CRISTIAN GEOVANNY					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000038125					Orden Entrega:				0005
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+8206	MPLX6 AREQUIPE VASO 50G					         2		UN		PV000750
+5510	Q PARME KIOSKO RALL BOL 40G					         5		UN		PV005100
+10653	YOG BBLE KIOSKO FTLLA FUN 900G					         5		UN		PV006700
+10654	YOG BBLE KIOSKO DZNO FUN 900G					         8		UN		PV006750
+10990	YOG BBLE KIOSKO MOR FUN 900G					         5		UN		PV006800
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     5
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		DELGADO ORTIZ CARLOS ALFREDO					Almacén:				1001
+Código Cliente:		1000038040					Ubicación:
+Punto de Envío:		LOS ANDES Y SARAHURCO CUENCA					Número Entrega:				 814190468
+Código Pto Envío:		1000038040					Fecha Entrega:				31.10.2024
+Punto de Entrega:		MINI MARKET DON CARLITOS					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000038040					Orden Entrega:				0004
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+15565	FOURPACK AREQUIPE Y PRETZELS 75 GR					         1		UN
+15592	YOG BBLE KIOSKO NATURAL FUN 900G					         2		UN
+16157	Q MOZZAR KIOSKO 5 LONJ 75G					         4		UN
+16678	YOG BBLE KIOSKO GNBN 900G					         3		UN
+17350	YOG BBLE KID KK BANANO BOT 180G					         3		UN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     6
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		DELGADO ORTIZ CARLOS ALFREDO					Almacén:				1001
+Código Cliente:		1000038040					Ubicación:				PV
+Punto de Envío:		LOS ANDES Y SARAHURCO CUENCA					Número Entrega:				 814190468
+Código Pto Envío:		1000038040					Fecha Entrega:				31.10.2024
+Punto de Entrega:		MINI MARKET DON CARLITOS					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000038040					Orden Entrega:				0004
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+8206	MPLX6 AREQUIPE VASO 50G					         3		UN		PV000750
+5709	DULCE LCH KIOSKO VASO 500G					         6		UN		PV001250
+12036	Q CHED KIOSKO 10 LONJ 200G					         4		UN		PV001650
+10654	YOG BBLE KIOSKO DZNO FUN 900G					         2		UN		PV006750
+12299	YOG DUO KIOSKO PINA COCO FUN 900G					         5		UN		PV006900
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     7
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		VILLA PICHIZACA NORMA ISABEL					Almacén:				1001
+Código Cliente:		1000038206					Ubicación:
+Punto de Envío:		LOS ANDES 4 20 Y PACHACUTEC CUENC					Número Entrega:				 814190484
+Código Pto Envío:		1000038206					Fecha Entrega:				31.10.2024
+Punto de Entrega:		TIENDA NORMA					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000038206					Orden Entrega:				0003
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+15592	YOG BBLE KIOSKO NATURAL FUN 900G					         4		UN
+15997	QUESO SANDUCHE KIOSKO 75G					         2		UN
+16156	Q CHED KIOSKO 5 LONJ 75G					         2		UN
+16157	Q MOZZAR KIOSKO 5 LONJ 75G					         2		UN
+16678	YOG BBLE KIOSKO GNBN 900G					         4		UN
+17113	BON YURT CHOCAPIC 158G					         2		UN
+17114	BON YURT MINI HOJUELAS 87G					         3		UN
+17115	BY MINI CRUNFRE VASO 90G					         3		UN
+17116	BY MINI CANPOP VASO 105G					         3		UN
+17117	BY MINI MASMELOS 88G					         3		UN
+17350	YOG BBLE KID KK BANANO BOT 180G					         2		UN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     8
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU077
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0098
+Cliente:		VILLA PICHIZACA NORMA ISABEL					Almacén:				1001
+Código Cliente:		1000038206					Ubicación:				PV
+Punto de Envío:		LOS ANDES 4 20 Y PACHACUTEC CUENC					Número Entrega:				 814190484
+Código Pto Envío:		1000038206					Fecha Entrega:				31.10.2024
+Punto de Entrega:		TIENDA NORMA					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000038206					Orden Entrega:				0003
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+8656	BY FROOT LOOPS VASO 154 G					         3		UN		PV004650
+10663	BY NEON VASO 170G					         3		UN		PV004700
+5523	BY BLCK VASO 165G					         5		UN		PV004750
+11796	BY AREQ VASO 165G					         2		UN		PV005050
+4920	RGN TZOS DZNO VASO 150G					         2		UN		PV006050
+4921	RGN TZOS FTLLA VASO 150G					         2		UN		PV006100
+6221239	ALPINETTE CEREZA 140G ECU					         1		UN		PV006350
+10653	YOG BBLE KIOSKO FTLLA FUN 900G					         4		UN		PV006700
+10654	YOG BBLE KIOSKO DZNO FUN 900G					         4		UN		PV006750
+10990	YOG BBLE KIOSKO MOR FUN 900G					         4		UN		PV006800
+12299	YOG DUO KIOSKO PINA COCO FUN 900G					         4		UN		PV006900
+2121	RGN CER PITA BOT 180G					         3		UN		PV007250
+4160	RGN BBLE DZNO BOT 180G					         1		UN		PV007700
+4162	RGN BBLE FTLLA BOT 180G					         1		UN		PV007750
+4010	RGN LGHT FTLLA BOT 180G					         2		UN		PV010000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			     9
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU075
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0095
+Cliente:		CONORQUE CIALTDA					Almacén:				1001
+Código Cliente:		1000016218					Ubicación:
+Punto de Envío:		AUTOPISTA CUENCA AZOGUES Y CHAULL					Número Entrega:				 814190650
+Código Pto Envío:		8000005607					Fecha Entrega:				31.10.2024
+Punto de Entrega:		CONORQUE CHUALLABAMBA					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		8000005607					Orden Entrega:				0002
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+5717	Q AMERIC KIOSKO 20 LONJ 300G					         3		UN
+11037	MPLX4 BY NEON VASO 170G					         3		UN
+14164	MPLX4 ALPINETTE MOR 140G					         4		UN
+14165	MPLX4 ALPINETTE CZA 140G					         3		UN
+14606	YOG BBLE KID KK MORA BOT 120G					        12		UN
+14607	YOG BBLE KID KK MORA BOT 180G					        10		UN
+15592	YOG BBLE KIOSKO NATURAL FUN 900G					        15		UN
+15594	YOG BBLE KIOSKO NRJLA BOT 950G					         1		UN
+15997	QUESO SANDUCHE KIOSKO 75G					         4		UN
+16017	YOG FNSSE DURAZNO BOT 1670G					         1		UN
+16018	YOG FNSSE DURAZNO BOT 950G					         1		UN
+16157	Q MOZZAR KIOSKO 5 LONJ 75G					        10		UN
+16230	Q GOUDA KIOSKO LONJ 200G					         2		UN
+16232	Q AMERIC KIOSKO LONJ 150G					         6		UN
+16236	Q MOZAR HIERBAS KIOSKO BLOQ 500G					         2		UN
+16530	BY MINI GOMITAS 127G					        12		UN
+16678	YOG BBLE KIOSKO GNBN 900G					        10		UN
+16679	RGN BBLE MORA 1750					         3		UN
+16680	RGN BBLE MORA 1000					         4		UN
+16745	SELECCION ESPECIAL KIOSKO 150G					         4		UN
+17113	BON YURT CHOCAPIC 158G					         6		UN
+17115	BY MINI CRUNFRE VASO 90G					         6		UN
+17116	BY MINI CANPOP VASO 105G					         6		UN
+17117	BY MINI MASMELOS 88G					         6		UN
+17262	Q MIX GOURMET KIOSKO CUBO BOL 150G					         5		UN
+17350	YOG BBLE KID KK BANANO BOT 180G					        10		UN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			    10
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU075
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0095
+Cliente:		CONORQUE CIALTDA					Almacén:				1001
+Código Cliente:		1000016218					Ubicación:				PV
+Punto de Envío:		AUTOPISTA CUENCA AZOGUES Y CHAULL					Número Entrega:				 814190650
+Código Pto Envío:		8000005607					Fecha Entrega:				31.10.2024
+Punto de Entrega:		CONORQUE CHUALLABAMBA					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		8000005607					Orden Entrega:				0002
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+11107	YOG BBLE KIOSKO DZNO BOT 950G					         1		UN		PV000050
+11109	YOG BBLE KIOSKO MOR BOT 950G					         2		UN		PV000100
+11105	YOG BBLE KIOSKO FTLLA BOT 950G					         1		UN		PV000150
+11108	YOG BBLE KIOSKO DZNO BOT 1700G					         1		UN		PV000250
+11953	YOG FNSSE FRTROJ BOT 950G					         1		UN		PV000300
+12549	YOG FNSSE FRTROJ BOT 1670G					         3		UN		PV000350
+10829	YOG BBLE KIOSKO FTLLA BOT 3.5KG					        10		UN		PV000450
+10830	YOG BBLE KIOSKO DZNO BOT 3.5KG					        10		UN		PV000500
+12300	YOG BBLE KIOSKO MOR BOT 3.5KG					        10		UN		PV000550
+8260	AREQUIPE VASO 250G ECU					        20		UN		PV000800
+8261	AREQUIPE VASO 500G ECU					        15		UN		PV000850
+8208	AREQUIPE GAR 4.6KG					         1		UN		PV000900
+5706	DULCE LCH KIOSKO VASO 250G					        12		UN		PV001200
+5709	DULCE LCH KIOSKO VASO 500G					        10		UN		PV001250
+5763	Q JAVIER KIOSKO BLOQ 320G					         2		UN		PV001500
+12035	Q MOZAR KIOSKO 10 LONJ 150G					        10		UN		PV001550
+5746	Q MOZAR PIZZ KIOSKO 20 LONJ 300G					         6		UN		PV001600
+12036	Q CHED KIOSKO 10 LONJ 200G					         5		UN		PV001650
+5748	Q MOZAR PIZZ KIOSKO RALL BOL 300G					         3		UN		PV001700
+5780	Q MIX MEX KIOSKO RALL BOL 300G					         2		UN		PV001750
+5769	Q MIX ESPECIAL KIOSKO CUBO BOL 350G					         4		UN		PV001800
+12037	Q MIX GOURMET KIOSKO CUBO BOL 350G					         4		UN		PV002200
+5760	Q HOLAN KIOSKO 10 LONJ 150G					         3		UN		PV002650
+5759	Q HOLAN KIOSKO 20 LONJ 300G					         3		UN		PV002800
+5778	Q SANDU KIOSKO 20 LONJ 300G					         8		UN		PV002900
+5750	Q RICOTTA KIOSKO BLOQ 250G					         2		UN		PV003100
+10071	Q RICOTTA KIOSKO BLOQ 450G					         2		UN		PV003150
+5729	Q MOZAR KIOSKO BLOQ 200G					        20		UN		PV003200
+5730	Q MOZAR KIOSKO BLOQ 350G					        10		UN		PV003250
+5731	Q MOZAR KIOSKO BLOQ 500G					        20		UN		PV003300
+5732	Q MOZAR KIOSKO BLOQ 700G					        15		UN		PV003400
+5733	Q MOZAR KIOSKO BLOQ 900G					         6		UN		PV003450
+5735	Q MOZAR LGHT KIOSKO BLOQ 200G					        15		UN		PV003600
+5736	Q MOZAR LGHT KIOSKO BLOQ 500G					        15		UN		PV003650
+5737	Q MOZAR LGHT KIOSKO BLOQ 700G					        10		UN		PV003700
+5818	Q FRES KIOSKO BLOQ 450G					         3		UN		PV003750
+10127	Q MOZAR KIOSKO SNACK 50G					        25		UN		PV004200
+12416	Q AMASADO KIOSKO BLOQ 450G					         3		UN		PV004400
+4133	MPLX6 RGN TZOS MULTSAB VASO 150G					         5		UN		PV004450
+4134	MPLX6 RGN BBLE MULTSAB BOT 180G					         5		UN		PV004500
+8656	BY FROOT LOOPS VASO 154 G					        10		UN		PV004650
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			    11
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU075
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0095
+Cliente:		CONORQUE CIALTDA					Almacén:				1001
+Código Cliente:		1000016218					Ubicación:				PV
+Punto de Envío:		AUTOPISTA CUENCA AZOGUES Y CHAULL					Número Entrega:				 814190650
+Código Pto Envío:		8000005607					Fecha Entrega:				31.10.2024
+Punto de Entrega:		CONORQUE CHUALLABAMBA					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		8000005607					Orden Entrega:				0002
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+10663	BY NEON VASO 170G					        10		UN		PV004700
+5523	BY BLCK VASO 165G					        30		UN		PV004750
+11796	BY AREQ VASO 165G					        10		UN		PV005050
+5510	Q PARME KIOSKO RALL BOL 40G					        12		UN		PV005100
+5512	Q PARME KIOSKO RALL BOL 250G					         6		UN		PV005200
+5513	Q PARME KIOSKO RALL BOL 500G					         6		UN		PV005250
+4921	RGN TZOS FTLLA VASO 150G					         6		UN		PV006100
+6219239	ALPINETTE FRESA 140G ECU					        10		UN		PV006300
+6221239	ALPINETTE CEREZA 140G ECU					        10		UN		PV006350
+6226239	ALPINETTE MORA 140G ECU					        15		UN		PV006450
+10653	YOG BBLE KIOSKO FTLLA FUN 900G					        20		UN		PV006700
+10654	YOG BBLE KIOSKO DZNO FUN 900G					        20		UN		PV006750
+10990	YOG BBLE KIOSKO MOR FUN 900G					        20		UN		PV006800
+12299	YOG DUO KIOSKO PINA COCO FUN 900G					        20		UN		PV006900
+4889	RGN TZOS MOR BOT 1000G					         3		UN		PV006950
+4894	RGN TZOS FTLLA BOT 1000G					         2		UN		PV007000
+4895	RGN TZOS DZNO BOT 1000G					         3		UN		PV007050
+4247	RGN TZOS MOR BOT 1750G					         4		UN		PV007100
+4248	RGN TZOS DZNO BOT 1750G					         4		UN		PV007150
+2122	RGN CER PITA BOT 1000G					         3		UN		PV007300
+2123	RGN CER PITA BOT 1750G ECU					         3		UN		PV007350
+1224	MPLX4 BY BLCK VASO 165G					         5		UN		PV007600
+9088	MPLX4 BY MULTSAB VASO ECU					         4		UN		PV007650
+4161	RGN BBLE DZNO BOT 1000G					         3		UN		PV007850
+4011	RGN LGHT FTLLA BOT 1000G					         1		UN		PV008000
+4012	RGN LGHT FTLLA BOT 1750G					         1		UN		PV008050
+4013	MPLX4 RGN LGHT FTLLA BOT 180G					         4		UN		PV008250
+11955	YOG FNSSE SBILA BOT 950G					         1		UN		PV008550
+12548	YOG FNSSE SBILA BOT 1670G					         3		UN		PV009250
+11175	YOG BBLE KID KK FTLLA BOT 180G					        10		UN		PV009450
+11177	YOG BBLE KID KK DZNO BOT 180G					        10		UN		PV009500
+10984	YOG BBLE KID KK FTLLA BOT 120G					        12		UN		PV009550
+10986	YOG BBLE KID KK DZNO BOT 120G					         6		UN		PV009600
+5275	RGN BBLE DZNO BOT 1750G					         3		UN		PV010100
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			    12
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU074
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0095
+Cliente:		CONORQUE CIALTDA					Almacén:				1001
+Código Cliente:		1000016218					Ubicación:
+Punto de Envío:		AV DE LAS AMERICAS L 4 Y AV DON B					Número Entrega:				 814190614
+Código Pto Envío:		1000016218					Fecha Entrega:				31.10.2024
+Punto de Entrega:		CONORQUE					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000016218					Orden Entrega:				0001
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+5717	Q AMERIC KIOSKO 20 LONJ 300G					         8		UN
+8414	AREQUIPE VASO 50G ECU					        24		UN
+11037	MPLX4 BY NEON VASO 170G					         4		UN
+13828	QUESO MOZARELLA LIGHT KIOSKO 35 G					         5		UN
+14606	YOG BBLE KID KK MORA BOT 120G					         8		UN
+14607	YOG BBLE KID KK MORA BOT 180G					         8		UN
+14719	MANTEQUILLA CON SAL KIOSKO 250G					         6		UN
+15592	YOG BBLE KIOSKO NATURAL FUN 900G					        30		UN
+15997	QUESO SANDUCHE KIOSKO 75G					         8		UN
+16078	PACK Q SAND KIOSKO BLOQ 146G JAM					        12		UN
+16157	Q MOZZAR KIOSKO 5 LONJ 75G					        10		UN
+16510	GRIEG KIOSKO FRUT ROJ 120					         8		UN
+16511	GRIEG KIOSKO FRUT ROJ 400					         3		UN
+16512	GRIEG KIOSKO MOR Y ARAND 400					         3		UN
+16513	GRIEG KIOSKO MOR Y ARAND 120					         8		UN
+16514	GRIEG KIOSKO NATURAL 400					         4		UN
+16515	GRIEG KIOSKO NATURAL 120					         8		UN
+16530	BY MINI GOMITAS 127G					        15		UN
+16678	YOG BBLE KIOSKO GNBN 900G					        30		UN
+16681	RGN BBLE MORA 180					         6		UN
+16743	DULCE DE LECHE KIOSKO DOYPACK 100G					        24		UN
+17113	BON YURT CHOCAPIC 158G					        12		UN
+17350	YOG BBLE KID KK BANANO BOT 180G					         8		UN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			    13
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU074
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0095
+Cliente:		CONORQUE CIALTDA					Almacén:				1001
+Código Cliente:		1000016218					Ubicación:				PV
+Punto de Envío:		AV DE LAS AMERICAS L 4 Y AV DON B					Número Entrega:				 814190614
+Código Pto Envío:		1000016218					Fecha Entrega:				31.10.2024
+Punto de Entrega:		CONORQUE					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000016218					Orden Entrega:				0001
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+11109	YOG BBLE KIOSKO MOR BOT 950G					         3		UN		PV000100
+10829	YOG BBLE KIOSKO FTLLA BOT 3.5KG					        10		UN		PV000450
+10830	YOG BBLE KIOSKO DZNO BOT 3.5KG					        10		UN		PV000500
+8260	AREQUIPE VASO 250G ECU					        24		UN		PV000800
+8261	AREQUIPE VASO 500G ECU					        12		UN		PV000850
+8208	AREQUIPE GAR 4.6KG					         1		UN		PV000900
+5706	DULCE LCH KIOSKO VASO 250G					        24		UN		PV001200
+12035	Q MOZAR KIOSKO 10 LONJ 150G					        12		UN		PV001550
+12036	Q CHED KIOSKO 10 LONJ 200G					         6		UN		PV001650
+5777	Q SANDU KIOSKO 10 LONJ 150G					         6		UN		PV002750
+5729	Q MOZAR KIOSKO BLOQ 200G					        15		UN		PV003200
+5730	Q MOZAR KIOSKO BLOQ 350G					         8		UN		PV003250
+5731	Q MOZAR KIOSKO BLOQ 500G					         5		UN		PV003300
+5732	Q MOZAR KIOSKO BLOQ 700G					         5		UN		PV003400
+5733	Q MOZAR KIOSKO BLOQ 900G					         3		UN		PV003450
+5735	Q MOZAR LGHT KIOSKO BLOQ 200G					        15		UN		PV003600
+5736	Q MOZAR LGHT KIOSKO BLOQ 500G					         5		UN		PV003650
+5737	Q MOZAR LGHT KIOSKO BLOQ 700G					         3		UN		PV003700
+10127	Q MOZAR KIOSKO SNACK 50G					        15		UN		PV004200
+8656	BY FROOT LOOPS VASO 154 G					        15		UN		PV004650
+10663	BY NEON VASO 170G					        12		UN		PV004700
+5523	BY BLCK VASO 165G					        40		UN		PV004750
+11796	BY AREQ VASO 165G					        12		UN		PV005050
+5510	Q PARME KIOSKO RALL BOL 40G					        12		UN		PV005100
+4454239	AVENA CANELA VASO 250G ECU					        12		UN		PV005700
+4450239	AVENA ORIGINAL VASO 250G ECU					        24		UN		PV005750
+4920	RGN TZOS DZNO VASO 150G					         6		UN		PV006050
+4921	RGN TZOS FTLLA VASO 150G					         6		UN		PV006100
+4923	RGN TZOS MOR VASO 150 G					         6		UN		PV006150
+6219239	ALPINETTE FRESA 140G ECU					        15		UN		PV006300
+6221239	ALPINETTE CEREZA 140G ECU					        15		UN		PV006350
+6222239	ALPINETTE MELOCOTON 140G ECU					        15		UN		PV006400
+6226239	ALPINETTE MORA 140G ECU					        15		UN		PV006450
+10653	YOG BBLE KIOSKO FTLLA FUN 900G					        50		UN		PV006700
+10654	YOG BBLE KIOSKO DZNO FUN 900G					        50		UN		PV006750
+10990	YOG BBLE KIOSKO MOR FUN 900G					        50		UN		PV006800
+12299	YOG DUO KIOSKO PINA COCO FUN 900G					        50		UN		PV006900
+1224	MPLX4 BY BLCK VASO 165G					         6		UN		PV007600
+9088	MPLX4 BY MULTSAB VASO ECU					         3		UN		PV007650
+12548	YOG FNSSE SBILA BOT 1670G					         3		UN		PV009250
+10984	YOG BBLE KID KK FTLLA BOT 120G					         8		UN		PV009550
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________
+
+
+				LISTA DE SEPARACIÓN					Página:			    14
+					AlpiEcuador S.A
+
+							Transporte:				50640325
+							Ruta:				EGU074
+Centro:		7711 CEDI GUAYAQUIL					Zona de Transp:				ECGU0095
+Cliente:		CONORQUE CIALTDA					Almacén:				1001
+Código Cliente:		1000016218					Ubicación:				PV
+Punto de Envío:		AV DE LAS AMERICAS L 4 Y AV DON B					Número Entrega:				 814190614
+Código Pto Envío:		1000016218					Fecha Entrega:				31.10.2024
+Punto de Entrega:		CONORQUE					Fecha Impresión:				30.10.2024
+Códg Pto Entrega:		1000016218					Orden Entrega:				0001
+Orden de Compra:							Usuario:			EC0913991345
+
+Código	Descripción					Cant.Reserv		UM		Ubicación
+
+10986	YOG BBLE KID KK DZNO BOT 120G					         8		UN		PV009600
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cubetas Grandes			____________________
+Cubetas Medianas			____________________
+Cubetas Pequeñas			____________________
+Cajas de Embalaje			____________________
+Estibas			____________________				FIN Transporte:				50640325

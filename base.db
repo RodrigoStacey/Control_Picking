@@ -1,0 +1,87 @@
+Creación View 
+CREATE View control_pedidos_dia
+AS
+SELECT pedidos.idcentro ,centros.centro,ruta,estado, COUNT(DISTINCT num_entrega) AS total_pedidos  FROM pedidos 
+LEFT OUTER JOIN centros on pedidos.idcentro = centros.idcentro
+WHERE fecha =  CURDATE()
+GROUP BY pedidos.idcentro,centros.centro,ruta,estado
+
+
+
+select idcentro,centro,ruta,
+    SUM(CASE WHEN estado = 'A' THEN total_pedidos ELSE 0 END) AS "Activos",
+    SUM(CASE WHEN estado = 'P' THEN total_pedidos ELSE 0 END) AS "EnProceso",
+    SUM(CASE WHEN estado = 'F' THEN total_pedidos ELSE 0 END) AS "Finalizados"
+FROM control_pedidos_dia;
+GROUP BY idcentro,centro,ruta
+
+
+
+
+    {% if txtCodigoEAN %}
+    <!--<div class="row mt-3">-->
+        <!-- Formulario principal -->
+        <div class="col-lg-8 col-md-12 col-lg-12">
+            <div class="card">
+                <div class="card-body">    
+                    <form method="post" action="/fechas_store_scan" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                        <input type="hidden" name="txtIdCentro" value="{{centro}}">
+                        <input type="hidden" name="txtIdAlmacen" value="{{almacen}}">
+                        <input type="hidden" name="txtFechaToma" value="{{fecha}}">
+                        <input type="hidden" name="action" id="action">
+                    
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <label for="txtFechaVencimiento">Vencimiento:</label>
+                                    <input 
+                                        class="form-control" 
+                                        name="txtFechaVencimiento" 
+                                        type="date"
+                                        placeholder="Fecha de vencimiento"
+                                        required>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <label for="txtCantidad">Cantidad:</label>
+                                    <input 
+                                        class="form-control" 
+                                        name="txtCantidad" 
+                                        type="number"
+                                        placeholder="Cantidad"
+                                        required>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-end">
+                                <button class="btn btn-warning btn-block" type="submit">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de registros 
+         "col-lg-4 col-md-12 mt-3 mt-lg-0"
+        -->
+        <div class="col-lg-8 col-md-12 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Registros Agregados</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div class="tabla-personalizada">
+                            {{ tabla|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+    {% endif %}

@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h1 class="card-title">Registro Fechas Cortas</h1>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <form id="form-regresar" action="{{ url_for('inicio_fechas') }}" method="post" class="inline-form">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="txtCentro" value="{{centro}}">
+                        <input type="hidden" name="txtAlmacen" value="{{almacen}}">
+                        <input type="hidden" name="txtFechaActual" value="{{fecha}}">
+                        <button type="submit" class="btn btn-success btn-block">Regresar</button>
+                    </form>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <a href="{{ url_for('inicio_fechas') }}" class="btn btn-danger btn-block">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="row mt-3">-->
+        <!-- Formulario principal -->
+        <div class="col-lg-8 col-md-12 col-lg-12">
+            <div class="card">
+                <div class="card-body">       
+                    <form method="post" action="/fechas_store" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                        <input type="hidden" name="txtIdCentro" value="{{centro}}">
+                        <input type="hidden" name="txtIdAlmacen" value="{{almacen}}">
+                        <input type="hidden" name="txtFechaToma" value="{{fecha}}">
+                        <input type="hidden" name="action" id="action">
+                    
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <label for="idproducto">Producto:</label>
+                                    <input 
+                                        class="form-control" 
+                                        type="text" 
+                                        name="txtIdProducto" 
+                                        maxlength="10" 
+                                        pattern="[0-9]{1,10}" 
+                                        inputmode="numeric"
+                                        placeholder="Código de producto"
+                                        required>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <label for="txtFechaVencimiento">Vencimiento:</label>
+                                    <input 
+                                        class="form-control" 
+                                        name="txtFechaVencimiento" 
+                                        id="fechavencimiento_MAN"
+                                        type="date"
+                                        placeholder="Fecha de vencimiento"
+                                        required>
+
+
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="form-group">
+                                    <label for="txtCantidad">Cantidad:</label>
+                                    <input 
+                                        class="form-control" 
+                                        name="txtCantidad" 
+                                        type="number"
+                                        placeholder="Cantidad"
+                                        required>
+                                    </input>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-end">
+                                <button class="btn btn-warning btn-block" type="submit">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de registros 
+         "col-lg-4 col-md-12 mt-3 mt-lg-0"
+        -->
+        <div class="col-lg-8 col-md-12 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Registros Agregados</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div class="tabla-personalizada">
+                            {{ tabla|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+</div>
+
+
+<script>
+    // Obtener la fecha mínima permitida desde la variable 'fecha' que se pasa desde Flask al template.
+    const fechaMinima = new Date("{{ fecha }}");
+    const inputFechaVencimiento = document.getElementById('FechaVencimiento_MAN');
+
+    // Configurar el atributo "min" del input de fecha para que no acepte fechas menores a 'fechaMinima'
+    inputFechaVencimiento_MAN.min = fechaMinima.toISOString().split('T')[0];
+
+    inputFechaVencimiento_MAN.addEventListener('input', function() {
+        const fechaIngresada = new Date(this.value);
+        if (fechaIngresada < fechaMinima) {
+            alert("La fecha de vencimiento no puede ser menor a la fecha actual.");
+            this.value = "";  // Borrar el valor ingresado
+        }
+    });
+</script>
+
+
+
+{% endblock content %}

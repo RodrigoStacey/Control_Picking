@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    
+    {% endwith %}
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <div class="card card-primary">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-3">
+                        <h3 class="card-title">Control Pedidos Procesados</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="card-title">Centro - {{var_centro}}</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="card-title">Fecha- {{fechaactual}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped" style="font-size: 11px;">
+                    <thead>
+                    <tr  style="font-size: 11px;">
+                        <th>Ruta</th>
+                        <th>Transporte</th>
+                        <th>Entrega</th>
+                        <th>Estado</th>
+                        <th># Productos</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in ped_list %}          
+                            <tr style="font-size: 11px; height: 8px; line-height: 2; padding: 0;">
+                                <td tyle="padding: 2px 5px;">{{item.ruta}}</td>
+                                <td tyle="padding: 2px 5px;">{{item.num_transporte}}</td>
+                                <td tyle="padding: 2px 5px;">{{item.num_entrega}}</td>
+                                <td tyle="padding: 2px 5px;">{{item.estado}}</td>
+                                <td tyle="padding: 2px 5px;">{{item.total_productos}}</td>
+                                <td tyle="padding: 2px 5px;">
+                                    <a class = "btn btn-warning" href="/edita_pedidos_procesados/{{item.num_entrega}}/{{var_centro}}/{{fechaactual}}" style="font-size: 11px; height: 20px; padding: 2px 5px;">Ver</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr  style="font-size: 11px;">
+                            <th>Ruta</th>
+                            <th>Transporte</th>
+                            <th>Entrega</th>
+                            <th>Estado</th>
+                            <th># Productos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </tfoot>
+                    </table>
+            </div>             
+            <div class="card-footer">
+                <div class="form-group">
+                    <input type="hidden" name="ruta" value="{{ var_centro }}">
+                    <input type="submit" class="btn btn-success" value="Buscar">
+                    <a href="{{url_for('menu_pedidos')}}" class="btn btn-primary">Regresar</a>
+                </div>   
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}
+
+

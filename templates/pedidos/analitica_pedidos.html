@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="card text-center card-primary">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-2">
+                    <h3 class="card-title"><strong>Analítica General</strong></h3>
+                </div>
+                <div class="col-8">
+                    <form method="POST" action="/analitica_pedidos"  enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="txtFechaInicial">Fecha Inicial:</label>
+                                <div class="input-group">
+                                    <input type="date" id="fecha" name="txtFechaInicial" class="form-control">
+                                </div>
+                            </div>       
+                            
+                            <div class="col-sm-3">
+                                <label for="txtFechaFinal">Fecha Final:</label>
+                                <div class="input-group">
+                                    <input type="date" id="fecha" name="txtFechaFinal" class="form-control">
+                                </div>
+                            </div>               
+                            <div class="col-sm-1">
+                                <br>
+                                <button type="submit" class="btn btn-success swalDefaultSuccess">
+                                Generar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+
+
+        <section class="content">
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <!-- Default box -->
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Datos Generales</h3>
+      
+                      <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>3,000</h3>
+                
+                                    <p>Ordenes tramitadas</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3>85<sup style="font-size: 20px">%</sup></h3>
+                
+                                    <p>Efectividad Picking</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-stats-bars"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3>15<sup style="font-size: 20px">%</sup></h3>
+                
+                                    <p>% Errores Separacion</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3>25<sup style="font-size: 20px">%</sup></h3>
+                
+                                    <p>%Errores Faltantes </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      Footer
+                    </div>
+                    <!-- /.card-footer-->
+                  </div>
+                  <!-- /.card -->
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="content">
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <!-- Default box -->
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Gráficos</h3>
+      
+                      <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <div class="card">
+                                    <div class="card-header" style=" background:#91CB84">                            
+                                        <h3>No. Errores Por Motivo</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content p-0">
+                                            <div id="graf_1" class="chart_holt" style="width:'auto';height: 450px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6 col-6">
+                                <div class="card">
+                                    <div class="card-header" style=" background:#91CB84">                            
+                                        <h3>Errores por Estación</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content p-0">
+                                            <div id="graf_2" class="chart_holt" style="width:'auto';height: 450px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <div class="card">
+                                    <div class="card-header" style=" background:#91CB84">                            
+                                        <h3>Efectividad por Estación</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content p-0">
+                                            <div id="graf_3" class="chart_holt" style="width:'auto';height: 450px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                      Footer
+                    </div>
+                    <!-- /.card-footer-->
+                  </div>
+                  <!-- /.card -->
+                </div>
+              </div>
+            </div>
+        </section>
+
+          
+        
+     
+    </div>
+
+</div>
+
+<script>
+    var chart = echarts.init(document.getElementById('graf_1'));
+    option = {
+
+        tooltip: {
+          trigger: 'axis'
+        },
+        legend: {
+          data: ['Error Estación', 'No Cumple ANS', 'Fecha Corta', 'No Conforme Calidad']
+        },
+        grid: {
+
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+          }
+        },
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            name: 'Error Estación',
+            type: 'line',
+            stack: 'Total',
+            data: [120, 132, 101, 134, 90, 230, 210]
+          },
+          {
+            name: 'No Cumple ANS',
+            type: 'line',
+            stack: 'Total',
+            data: [220, 182, 191, 234, 290, 330, 310]
+          },
+          {
+            name: 'Fecha Corta',
+            type: 'line',
+            stack: 'Total',
+            data: [150, 232, 201, 154, 190, 330, 410]
+          },
+          {
+            name: 'No Conforme Calidad',
+            type: 'line',
+            stack: 'Total',
+            data: [320, 332, 301, 334, 390, 330, 320]
+          },
+        ]
+      };
+
+    chart.setOption(option);
+</script>
+
+<script>
+    var chart = echarts.init(document.getElementById('graf_2'));
+    option = {
+
+        grid: {
+
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+
+        tooltip: {
+            trigger: 'axis'
+          },
+
+        xAxis: {
+          type: 'category',
+          data: ['Est_1', 'Est_2', 'Est_3', 'Est_4', 'Est_5', 'Est_6', 'Est_7']
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            data: [
+              120,
+              {
+                value: 200,
+                itemStyle: {
+                  color: '#a90000'
+                }
+              },
+              150,
+              80,
+              70,
+              110,
+              130
+            ],
+            type: 'bar'
+          }
+        ]
+      };
+      chart.setOption(option);
+
+    </script>
+
+    <script>
+        var chart = echarts.init(document.getElementById('graf_3'));
+        option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+              },
+            legend: {
+              top: 'bottom'
+            },
+            toolbox: {
+              show: true,
+              feature: {
+                mark: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true },
+                saveAsImage: { show: true }
+              }
+            },
+            series: [
+              {
+                name: 'Nightingale Chart',
+                type: 'pie',
+                radius: [50, 150],
+                center: ['50%', '50%'],
+                roseType: 'area',
+                itemStyle: {
+                  borderRadius: 8
+                },
+                data: [
+                  { value: 40, name: 'Est_1' },
+                  { value: 38, name: 'Est_2' },
+                  { value: 32, name: 'Est_3' },
+                  { value: 30, name: 'Est_4' },
+                  { value: 28, name: 'Est_5' },
+                  { value: 26, name: 'Est_6' },
+                  { value: 22, name: 'Est_7' }
+                ]
+              }
+            ]
+          };
+
+
+
+          chart.setOption(option);
+    
+        </script>
+
+
+
+{% endblock content%}
+

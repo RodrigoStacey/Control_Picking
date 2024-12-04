@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="/fechas_carga/{{centro}}/{{almacen}}/{{fecha}}" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Carga Masiva</h3>
+            </div>
+            <div class="card-body">
+                <div class="row"> 
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="txtCentro">Centro :</label>
+                            <input 
+                                id="centro"
+                                class="form-control" 
+                                type="text" 
+                                name="txtCentro"
+                                value={{centro}}
+                                readonly>
+                            </input>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="txtAlmacen">Almacen :</label>
+                            <input 
+                                id="almacen"
+                                class="form-control" 
+                                type="text" Generar
+                                name="txtAlmacen"
+                                value={{almacen}}
+                                readonly>
+                            </input>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="txtFecha">Fecha :</label>
+                            <input 
+                                id="fecha"
+                                class="form-control" 
+                                type="date" 
+                                name="txtFecha"
+                                value={{fecha}}
+                                readonly>
+                            </input>
+                        </div>
+                    </div>
+
+                    <div class="col-3 mt-4">
+                        <div class="form-group">
+                            <div class="input-group-append">
+                                <input type="button" class="btn btn-success" value="Generar" onclick="generarNombreFC()">
+                            </div>
+                            <input type="hidden" id="nombreArchivoInputFC" name="txtNombreArchivoFC">
+                        </div>
+                    </div>
+                </div> 
+            </div>  
+            <div class="row">
+                <div class="col-sm-4 mt-3" style="text-align: center;">
+                    <a> Está seguro de tener el archivo CSV con este nombre en el repositorio?</a>
+                </div>
+                <div class="col-sm-4" style="text-align: center;">
+                    <div class="alert alert-success alert-dismissible">
+                        <h5><i class="icon fas fa-check"></i> Atención!</h5>
+                        <p id="nombreArchivoFC" class="mt-2"></p>
+                    </div>
+                </div>
+                <div class="col-sm-4 mt-3" style="text-align: left;">
+                    <div class="form-group clearfix">
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="radioPrimary1" name="txtConfirmacion" value="on">
+                            <label for="radioPrimary1">
+                                Si
+                            </label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="radioPrimary2" name="txtConfirmacion" value="off" checked>
+                            <label for="radioPrimary2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div class="card-footer">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Aceptar">
+                    <a href="{{url_for('inicio_fechas')}}" class="btn btn-primary">Regresar</a>
+                </div>   
+            </div>
+        </div>
+    </form>
+    
+</div>
+
+<script>
+    function generarNombreFC() {
+        const centro = document.getElementById('centro').value;
+        const almacen = document.getElementById('almacen').value;
+        const fecha = document.getElementById('fecha').value;
+    
+        if (fecha && almacen) {
+            // Eliminar los guiones de la fecha (YYYYMMDD)
+            const fechaSinGuiones = fecha.replace(/-/g, '');
+            // Crear la cadena con agencia + fechaSinGuiones + ".csv"
+            const nombreArchivoFC = centro +'_'+ almacen +'_'+ fechaSinGuiones;
+            // Mostrar el resultado en el HTML
+            document.getElementById('nombreArchivoFC').textContent = "Nombre generado: " + nombreArchivoFC;
+            // Establecer el valor en el campo oculto
+            document.getElementById('nombreArchivoInputFC').value = nombreArchivoFC;
+        } else {
+            alert('Por favor, selecciona una fecha y un Centro de expedición.');
+        }
+    }
+</script>
+
+
+{% endblock content %}

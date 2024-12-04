@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    {% endwith %}
+
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="card-title">Fechas Cortas</h1>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-12 col-lg-12">
+        <div class="card">
+            <form method="POST" action="/inicio_fechas" enctype="multipart/form-data">
+                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Control Fechas Cortas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="txtCentro">Centro</label>
+                                    <select class="form-control" style="width: 100%;" name="txtCentro">
+                                        {% for opcion in cen_list %}
+                                            <option value="{{ opcion.idcentro }}" {% if opcion.idcentro == txtCentro %}selected{% endif %}>
+                                                {{ opcion.centro }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="txtAlmacen">Almacen</label>
+                                    <select class="form-control" style="width: 100%;" name="txtAlmacen">
+                                        {% for opcion in alm_list %}
+                                            <option value="{{ opcion.idalmacen }}" {% if opcion.idalmacen == txtAlmacen %}selected{% endif %}>
+                                                {{ opcion.almacen }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="fecha_actual">Fecha de ingreso :</label>
+                                    <input 
+                                        class="form-control" 
+                                        type="date" 
+                                        name="txtFechaActual"
+                                        value={{fecha_actual}}
+                                        readonly>
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group clearfix">
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="radioPrimary1" name="txtConfirmacion" value="on">
+                                        <label for="radioPrimary1">Si</label>
+                                    </div>
+                                    <div class="icheck-primary d-inline">
+                                        <input type="radio" id="radioPrimary2" name="txtConfirmacion" value="off" checked>
+                                        <label for="radioPrimary2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row" id="dateRow" style="display: none;">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="dateInput">Seleccione una fecha:</label>
+                                    <input type="date" id="dateInput" name = "txtFechaCopia" class="form-control" max="">
+                                    <span id="dateError" style="color: red; display: none;">La fecha debe ser menor a hoy.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>             
+                    <div class="card-footer">
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success" value="Buscar">
+                            <a href="{{url_for('home')}}" class="btn btn-primary">Regresar</a>
+                        </div>   
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const radioOn = document.getElementById('radioPrimary1');
+    const radioOff = document.getElementById('radioPrimary2');
+    const dateRow = document.getElementById('dateRow');
+    const dateInput = document.getElementById('dateInput');
+    const dateError = document.getElementById('dateError');
+
+    // Configurar el máximo para la fecha (hoy)
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('max', today);
+
+    // Mostrar u ocultar el campo de fecha según el radio seleccionado
+    radioOn.addEventListener('change', () => {
+        if (radioOn.checked) {
+            dateRow.style.display = 'block';
+        }
+    });
+
+    radioOff.addEventListener('change', () => {
+        if (radioOff.checked) {
+            dateRow.style.display = 'none';
+            dateError.style.display = 'none'; // Ocultar error al deseleccionar
+            dateInput.value = ''; // Limpiar el valor de la fecha
+        }
+    });
+
+    // Validar que la fecha sea menor a hoy
+    dateInput.addEventListener('change', () => {
+        if (new Date(dateInput.value) >= new Date(today)) {
+            dateError.style.display = 'block';
+        } else {
+            dateError.style.display = 'none';
+        }
+    });
+</script>
+
+{% endblock content %}

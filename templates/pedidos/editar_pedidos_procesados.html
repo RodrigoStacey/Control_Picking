@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+        
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-3">
+                    <h3 class="card-title">Control Pedidos Procesados</h3>
+                </div>
+                <div class="col-3">
+                    <h3 class="card-title">Centro - {{vcentro}}</h3>
+                </div>
+                <div class="col-3">
+                    <h3 class="card-title">Entrega - {{ventrega}}</h3>
+                </div>
+                <div class="col-3">
+                    <h3 class="card-title">Fecha- {{fecha_actual}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div class="tabla-personalizada">
+                    <table  id="example2" class="table table-bordered table-striped" style="font-size: 11px;">
+                        <thead>
+                        <tr  style="font-size: 11px;">
+                            <th style="padding: 2px 5px; text-align: left;">Ruta</th>
+                            <th style="padding: 2px 5px; text-align: left;">Codigo</th>
+                            <th style="padding: 2px 5px; text-align: left;">Producto</th>
+                            <th class="text-right multi-line" style="padding: 2px 5px; text-align: right;">
+                                <span>Pedido</span>
+                                <span>Total :<strong>{{ total_pedido }}</strong></span>
+                            </th>
+                            <th class="text-right multi-line" style="padding: 2px 5px; text-align: right;">
+                                <span>Conteo</span>
+                                <span>Total :<strong>{{ total_contada }}</strong></span>
+                            </th>
+                            <th class="text-right multi-line" style="padding: 2px 5px; text-align: right;">
+                                <span>Despacho</span>
+                                <span>Total :<strong>{{ total_despachada }}</strong></span>
+                            </th >
+                            <th style="padding: 2px 5px; text-align: right">Diferencia</th>
+                            <th style="padding: 2px 5px; text-align: left">Motivo</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in registros %}          
+                                <tr style="font-size: 11px; height: 8px; line-height: 2; padding: 0;">
+                                    <td style="padding: 2px 5px; text-align: left;">{{item.ruta}}</td>
+                                    <td style="padding: 2px 5px; text-align: left;">{{item.idproducto}}</td>
+                                    <td style="padding: 2px 5px; text-align: left;">{{item.descripcion}}</td>
+                                    <td style="padding: 2px 5px; text-align: right;">{{item.cantidad_pedido}}</td>
+                                    <td style="padding: 2px 5px; text-align: right;">{{item.cantidad_contada}}</td>
+                                    <td style="padding: 2px 5px; text-align: right;">{{item.cantidad_despachada}}</td>
+                                    <td style="padding: 2px 5px; text-align: right;">{{item.diferencial}}</td>
+                                    <td style="padding: 2px 5px; text-align: left;">{{item.motivo_descripcion}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                        <tfoot>
+                            <tr style="font-size: 11px;">
+                                <th>Ruta</th>
+                                <th>Codigo</th>
+                                <th>Producto</th>
+                                <th>Pedido</th>
+                                <th>Conteo</th>
+                                <th>Despacho</th>
+                                <th>Diferencia</th>
+                                <th>Motivo</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="form-group">
+                <a href="{{url_for('revision_pedidos',var_centro=vcentro)}}" class="btn btn-success">Regresar</a>
+            </div>   
+        </div>
+    </div>
+        
+    
+</div> 
+
+{% endblock content %}

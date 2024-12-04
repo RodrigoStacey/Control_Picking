@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    {% endwith %}
+
+    
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Nuevo Producto</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="idproducto">Código :</label>
+                            <input value= "{{ idproducto or '' }}"
+                                class="form-control" 
+                                type="text" 
+                                name="idproducto" 
+                                maxlength="10" 
+                                pattern="[0-9]{1,10}" 
+                                inputmode="numeric"
+                                title="Solo se permiten números (máximo 10 caracteres)"
+                                required>
+                            </input>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="form-group">
+                            <label for="descripcion">Descripción :</label>
+                            <input 
+                                class="form-control" 
+                                name="descripcion" 
+                                value= "{{ descripcion or '' }}"
+                                required>
+                            </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="estacion">Estación :</label>
+                            <input 
+                                class="form-control" 
+                                value= "{{ estacion or '1' }}"
+                                name="estacion" 
+                                required>
+                            </input>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="codigoEAN">Código EAN :</label>
+                            <input 
+                                class="form-control" 
+                                name="codigoEAN"
+                                value= "{{ codigoEAN or '' }}"
+                                maxlength="13" 
+                                minlength="13"
+                                pattern="\d{13}" 
+                                inputmode="numeric"
+                                title="Debe ingresar exactamente 13 números"
+                                required>
+                            </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="pesoSTD">Peso Estandar :</label>
+                            <input 
+                                class="form-control" 
+                                name="pesoSTD" 
+                                value= "{{ pesoSTD or '1' }}"
+                            required>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Agregar">
+                        <a href="{{url_for('productos_view')}}" class="btn btn-primary">Regresar</a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer%}

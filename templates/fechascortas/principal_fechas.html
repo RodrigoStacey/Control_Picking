@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h1 class="card-title">Método de Ingreso</h1>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <a href="{{ url_for('home') }}" class="btn btn-success btn-block">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{var_centro}}
+    {{var_almacen}}
+    {{var_fecha}}
+    <div class="card text-center card-primary">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-4">
+                <li class="nav-item d-none d-sm-inline-block">          
+                    <a href="/fechas_manual/{{var_centro}}/{{var_almacen}}/{{var_fecha}}" class="nav-link">              
+                        <img src="{{ url_for('static',filename= 'icons/digitar.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                    </a>
+                    ingreso Manual
+                </li>
+                </div>
+                <div class="col-sm-4">
+                <li class="nav-item d-none d-sm-inline-block">          
+                    <a href="/fechas_scan/{{var_centro}}/{{var_almacen}}/{{var_fecha}}" class="nav-link">              
+                        <img src="{{ url_for('static',filename= 'icons/codigo-de-barras.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                    </a>
+                    Escaneo
+                </li>
+                </div>
+                <div class="col-sm-4">
+                <li class="nav-item d-none d-sm-inline-block">          
+                    <a href="/fechas_carga/{{var_centro}}/{{var_almacen}}/{{var_fecha}}"  class="nav-link">              
+                        <img class="card-img-top"  src="{{ url_for('static',filename= 'icons/subiendo.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                    </a>
+                    Carga Masiva
+                </li>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock content%}

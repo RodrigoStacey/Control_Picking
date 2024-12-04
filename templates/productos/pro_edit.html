@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <div class="card card-warning">
+            <div class="card-header">
+                <h2 class="card-title">Editar Producto</h2>
+                <br>
+                <h6>Codigo : {{prod_list.idproducto}} - Codigo EAN : {{prod_list.codigoEAN}}</h6>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="form-group">
+                            <label for="descripcion">Descripción :</label>
+                            <input  value = "{{prod_list.descripcion}}" 
+                                    class="form-control" 
+                                    name="descripcion" 
+                                    required>
+                                </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="estacion">Estación :</label>
+                            <input  value = "{{prod_list.estacion}}" 
+                                    class="form-control" 
+                                    name="estacion" 
+                                    type="number" 
+                                    required>
+                            </input>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="pesoSTD">Peso Estandar :</label>
+                            <input  value = "{{prod_list.pesoSTD}}" 
+                                    type="number" 
+                                    step="0.1" 
+                                    class="form-control" 
+                                    name="pesoSTD" 
+                                    required>
+                            </input>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" value = {{prod_list.idproducto}} name="idproducto">
+                <input type="hidden" value = {{prod_list.codigoEAN}} name="codigoEAN">
+                <div class="card-footer">
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Guardar">
+                        <a href="{{url_for('productos_view')}}" class="btn btn-primary">Regresar</a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row align-items-stretch" style="display: flex;">
+        <div class="col-6 d-flex">
+            <div class="card text-center card-primary w-100">        
+                <div class="card-header">
+                    <h3 class="card-title"><strong>Centro  : {{vcentro}}</strong></h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <li class="nav-item d-none d-sm-inline-block">          
+                                <a href="/procesar_pedidos" class="nav-link">              
+                                    <img src="{{ url_for('static',filename= 'icons/descarga.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                                </a>
+                                Carga Pedidos Diarios
+                            </li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li class="nav-item d-none d-sm-inline-block">          
+                                <a href="/control_pedidos/{{vcentro}}" class="nav-link">              
+                                    <img class="card-img-top" src="{{ url_for('static',filename= 'icons/codigo-de-barras.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                                </a>
+                                Control Pedidos
+                            </li>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-4">
+                            <li class="nav-item d-none d-sm-inline-block">          
+                                <a href="/revision_pedidos/{{vcentro}}" class="nav-link">              
+                                    <img src="{{ url_for('static',filename= 'icons/revision.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                                </a>
+                                Revisión Pedidos
+                            </li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li class="nav-item d-none d-sm-inline-block">          
+                                <a href="/analitica_pedidos" class="nav-link">              
+                                    <img src="{{ url_for('static',filename= 'icons/analitica.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                                </a>
+                                Reportes de Control
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex">
+            <div class="card text-center card-primary w-100">
+                <div class="card-header">
+                    <h3 class="card-title"><strong>Fecha de proceso : {{fecha_actual}}</strong></h3>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover" style="font-size: 11px;">
+                        <thead>
+                            <tr style="font-size: 11px;">
+                                <th>Centro</th>
+                                <th>Ruta</th>
+                                <th>Activos</th>
+                                <th>En proceso</th>
+                                <th>Finalizados</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in listado_ped %}          
+                                <tr style="font-size: 11px; height: 8px; line-height: 2; padding: 0;">
+                                    <td style="padding: 2px 5px;">{{item.centro}}</td>
+                                    <td style="padding: 2px 5px;">{{item.ruta}}</td>
+                                    <td style="padding: 2px 5px;">{{item.activo}}</td>
+                                    <td style="padding: 2px 5px;">{{item.enproceso}}</td>
+                                    <td style="padding: 2px 5px;">{{item.finalizado}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+              
+
+    <div class="form-group">
+        <a href="{{url_for('ruta_pedidos')}}" class="btn btn-primary">Regresar</a>
+    </div>   
+
+
+
+</div>
+
+
+{% endblock content%}
+
+
+

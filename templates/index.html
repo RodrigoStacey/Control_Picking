@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-12">
+    <div class="card text-center card-primary">
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-4">
+                <li class="nav-item d-none d-sm-inline-block">          
+                    <a href="/productos_view" class="nav-link">              
+                        <img src="{{ url_for('static',filename= 'icons/catalogo.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                    </a>
+                    Catálogos
+                </li>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <li class="nav-item d-none d-sm-inline-block">          
+                        <a href="/inicio_fechas" class="nav-link">              
+                            <img src="{{ url_for('static',filename= 'icons/calendario.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                        </a>
+                        Fechas Cortas
+                    </li>
+                </div>
+
+                <div class="col-sm-4">
+                <li class="nav-item d-none d-sm-inline-block">          
+                    <a href="/ruta_pedidos"  class="nav-link">              
+                        <img class="card-img-top"  src="{{ url_for('static',filename= 'icons/Pedido.png')}}" alt="home" class="brand-image img-circle elevation-2" style="opacity: .8;width:100px;height: 100px;">
+                    </a>
+                    Pedidos
+                </li>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock content%}

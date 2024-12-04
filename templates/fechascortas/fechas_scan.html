@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h1 class="card-title">Registro Fechas Cortas</h1>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <a href="{{ url_for('inicio_fechas',centro=centro,almacen=almacen,fecha=fecha) }}" class="btn btn-success btn-block">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="row ml-4" >
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <form method="post" action="{{ url_for('fechas_scan', centro=centro, almacen=almacen, fecha=fecha) }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            
+                    <div class="form-group">
+                        <label for="codigoEAN">Código EAN</label>
+                        <div class="input-group">
+                            <input type="text" 
+                                   name="txtCodigoEAN" 
+                                   value="{{ codigo_ean or '' }}" 
+                                   class="form-control" 
+                                   maxlength="13" 
+                                   minlength="13" 
+                                   pattern="\d{13}" 
+                                   inputmode="numeric">
+                            <div class="input-group-append ml-3">
+                                <button class="btn btn-primary" type="submit">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                    <label for="idproducto">Código Producto</label>
+                    <div class="input-group">
+                        <input type="text" 
+                                name="idproducto" 
+                                class="form-control" 
+                                value={{idproducto}}
+                                readonly
+                                >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="form-group">
+                    <label for="descripcion">Nombre Producto</label>
+                    <div class="input-group">
+                        <input type="text" 
+                                name="descripcion" 
+                                class="form-control" 
+                                value="{{descripcion}}"
+                                readonly
+                                >
+                        <div class="input-group-append ml-3">
+                            <button id="btnNuevo" class="btn btn-warning" type="button" data-toggle="modal" data-target="#modalNuevo" disabled>Nuevo</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="col-lg-8 col-md-12 col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Registros Agregados</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div class="tabla-personalizada">
+                            {{ tabla|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>
+
+<!-- Modal para Nuevo Registro -->
+<div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="modalNuevoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" action="{{ url_for('nuevo_registro', centro=centro, almacen=almacen, fecha=fecha) }}">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNuevoLabel">Nuevo Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="idproducto" value="{{ idproducto }}">
+                    <input type="hidden" name="codigo_ean" value="{{ codigo_ean }}">
+
+                    <div class="form-group">
+                        <label for="fechavencimiento">Fecha de Vencimiento</label>
+                        <input type="date" name="fechavencimiento" id="fechavencimiento" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" name="cantidad" class="form-control" min="1" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Obtener la fecha mínima permitida desde la variable 'fecha' que se pasa desde Flask al template.
+    const fechaMinima = new Date("{{ fecha }}");
+    const inputFechaVencimiento = document.getElementById('fechavencimiento');
+
+    // Configurar el atributo "min" del input de fecha para que no acepte fechas menores a 'fechaMinima'
+    inputFechaVencimiento.min = fechaMinima.toISOString().split('T')[0];
+
+    inputFechaVencimiento.addEventListener('input', function() {
+        const fechaIngresada = new Date(this.value);
+        if (fechaIngresada < fechaMinima) {
+            alert("La fecha de vencimiento no puede ser menor a la fecha actual.");
+            this.value = "";  // Borrar el valor ingresado
+        }
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const idProducto = "{{ idproducto }}";  // Obtener valor de idproducto desde el servidor
+        const descripcion = "{{ descripcion }}";  // Obtener valor de descripcion desde el servidor
+        const btnNuevo = document.getElementById('btnNuevo');
+
+        // Si ambos valores son válidos (no null, no undefined, no vacío), habilitar el botón
+        if (idProducto && idProducto !== 'None' && descripcion && descripcion !== 'None') {
+            btnNuevo.disabled = false;
+        }
+    });
+</script>
+
+{% endblock content %}

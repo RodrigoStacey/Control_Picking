@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger" role="alert">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="/procesar_pedidos" enctype="multipart/form-data">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        <div class="card card-primary">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-3">
+                        <h3 class="card-title">Carga Pedidos</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="card-title">Centro - {{vcentro}}</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="card-title">Fecha- {{vfecha}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row"> 
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="txtCentro">Centro</label>
+                            <div class="input-group">
+                                <input type="text" id="centro" name="txtCentro" value = {{vcentro}} class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for="txtFecha">Fecha:</label>
+                            <div class="input-group">
+                                <input type="text" id="fecha" name="txtFecha" value = {{vfecha}} class="form-control" readonly>
+                                 <div class="input-group-append">
+                                    <input type="button" class="btn btn-success" value="Generar" onclick="generarNombre()">
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="nombreArchivoInput" name="txtNombreArchivo">
+                        </div>
+                    </div>           
+                    <div class="col-6">
+                        <div class="alert alert-success alert-dismissible">
+                            <h5><i class="icon fas fa-check"></i> Atención!</h5>
+                            <p id="nombreArchivo" class="mt-2"></p>
+                        </div>
+                        <p id="nombreArchivo" class="mt-2"></p>
+                    </div>
+                </div> 
+            </div>  
+            <div class="row">
+                <div class="col-sm-4" style="text-align: center;">
+                    <a> Está seguro de la información entregada?</a>
+                </div>
+                <div class="col-sm-4" style="text-align: left;">
+                    <div class="form-group clearfix">
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="radioPrimary1" name="txtConfirmacion" value="on">
+                            <label for="radioPrimary1">
+                                Si
+                            </label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                            <input type="radio" id="radioPrimary2" name="txtConfirmacion" value="off" checked>
+                            <label for="radioPrimary2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div class="card-footer">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Agregar">
+                    <a href="{{url_for('menu_pedidos')}}" class="btn btn-primary">Regresar</a>
+                </div>   
+            </div>
+        </div>
+    </form>
+    
+</div>
+
+<script>
+    function generarNombre() {
+        const fecha = document.getElementById('fecha').value;
+        const centro = document.getElementById('centro').value;
+
+    
+    
+        if (fecha && centro) {
+            // Eliminar los guiones de la fecha (YYYYMMDD)
+            const fechaSinGuiones = fecha.replace(/-/g, '');
+            // Crear la cadena con agencia + fechaSinGuiones + ".csv"
+            const nombreArchivo = centro + fechaSinGuiones;
+            // Mostrar el resultado en el HTML
+            document.getElementById('nombreArchivo').textContent = "Nombre generado: " + nombreArchivo;
+            // Establecer el valor en el campo oculto
+            document.getElementById('nombreArchivoInput').value = nombreArchivo;
+        } else {
+            alert('Por favor, selecciona una fecha y un Centro de expedición.');
+        }
+    }
+</script>
+
+
+{% endblock content %}

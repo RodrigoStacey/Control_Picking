@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="card-title">Listado de Productos</h1>
+                </div>
+                <div class="col-3">
+                    <a href="{{url_for('productos_create')}}" class="btn btn-primary">Ingresar Nuevo</a>
+                </div>
+                <div class="col-3">
+                    <a href="{{url_for('home')}}" class="btn btn-success">Regresar</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-body">
+            <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                    <tr style="font-size: 14px; height: 20px;">
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Estación</th>
+                        <th>Estado</th>
+                        <th>Barcode</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in prod_list %}          
+                        <tr style="font-size: 12px;">
+                            <td>{{item.idproducto}}</td>
+                            <td>{{item.descripcion}}</td>
+                            <td>{{item.estacion}}</td>
+                            <td>{{item.estado}}</td>
+                            <td>{{item.codigoEAN}}</td>
+                            <td>
+                                <a class = "btn btn-warning" href="/productos_edit/{{item.idproducto}}" style="font-size: 14px; height: 30px;">Editar</a>
+                                <a onclick = "return confirm('Desea inactivar?')" class = "btn btn-primary" href="/productos_inact/{{item.idproducto}}" style="font-size: 14px; height: 30px;">Inactivar</a>
+                                <a onclick = "return confirm('Desea activar?')" class = "btn btn-success" href="/productos_act/{{item.idproducto}}" style="font-size: 14px; height: 30px;">Activar</a>
+                                <a onclick = "return confirm('Desea eliminar?')" class = "btn btn-danger" href="/productos_del/{{item.idproducto}}" style="font-size: 14px; height: 30px;">Eliminar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
